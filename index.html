@@ -1,0 +1,222 @@
+<html>
+<head>
+    <title>James' Superb Routes</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            font-size: 36px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 20px;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .column:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #555;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #1f1f1f;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #ff0000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-content img {
+            max-width: 50%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-content {
+            animation-name: modal-fade;
+            animation-duration: 0.5s;
+        }
+
+        #modal-description {
+            font-size: 28px;
+            font-family: "Georgia", serif;
+        }
+
+        #modal-subheading {
+            font-size: 18px;
+        }
+
+        @keyframes modal-fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .bottom_button {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .link-button {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>James' Superb Routes</h1>
+    <div class="container">
+        <div class="column">
+            <h2>The 40 Board</h2>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Shrimp 7A', 'Feet follow hands', 'Perfectly balances good footholds with the need to use upper body strength.', 'images/generous_shrimp.png')">Generous Shrimp - 7A</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Angler Fish 6B', 'Screw-on feet only', 'Elegant dynamic moves between positive holds.', 'images/generous_angler_fish.png')">Generous Angler Fish - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Anteater 6B+', 'No feet', 'Phenomenal campus utilising jugs and pockets.', 'images/generous_anteater.png')">Generous Anteater - 6B+</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2>The Splat</h2>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Shark 6A', 'Feet follow hands', 'Crafted to enable the climber to use the heel in a controlled manner.', 'images/generous_shark.png')">Generous Shark - 6A</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Dolphin 6B', 'Selected feet only', 'Enables a quick move to start and then seamlessly becomes slowed and controlled.', 'images/generous_dolphin.png')">Generous Dolphin - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Gorilla 4+', 'Open feet', 'Perfectly sculpted jug ladder with a mixture of angled holds.', 'images/generous_gorilla.png')">Generous Gorilla - 4+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Llama ?', 'Feet follow hands', 'Hard start rewards you with an integrated hand swap before the finish.', 'images/generous_llama.png')">Generous Llama - ?</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Pony 6A+', 'No feet', 'A rare but beautiful example of a campus on the splat.', 'images/generous_pony.png')">Generous Pony - 6A+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Goose 6C', 'Selected feet only', 'This was meticulously crafted to enable a sequence of moves that flow like liquid poetry.', 'images/generous_goose.png')">Generous Goose - 6C</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Mole 6A+', 'Feet follow hands', 'Uses a range of good and bad holds to create the illusion of a difficult climb.', 'images/generous_mole.png')">Generous Mole - 6A+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Eel 6B+', 'Selected feet only', 'The double pinch near the top makes for a truly magical experience.', 'images/generous_eel.png')">Generous Eel - 6B+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Chameleon 6B', 'Selected feet only', 'Huge dynamic movement which generates an incredible swing.', 'images/generous_chameleon.png')">Generous Chameleon - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Goldfish 6B', 'Feet follow hands', 'Perfect blend of handholds to create a medium climb.', 'images/generous_goldfish.png')">Generous Goldfish - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Porcupine 6B', 'Selected feet only', 'The colour coordination on this climb is beautiful - using orange feet and blue crimps with a green hold to end.', 'images/generous_porcupine.png')">Generous Porcupine - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Pigeon 6B+', 'Feet follow hands', 'Starts incredibly hard but swiftly moves to a juggy finish.(look in the red pocket)', 'images/generous_pigeon.png')">Generous Pigeon - 6B+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Turkey 6A', 'Selected feet only', 'The move to the 2 big holds is what dreams are made of which is why this is an all-time fan favourite.', 'images/generous_turkey.png')">Generous Turkey - 6A</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2>The Woody</h2>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Eagle 6A+', 'Feet follow hands', 'You can see where the name comes from once completing this climb - the last move will have you thinking you are an eagle.', 'images/generous_eagle.png')">Generous Eagle - 6A+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Caterpillar 6B', 'Screw on feet', 'All good holds but gets a higher grade because of the way it forces your body into so many elegant positions.', 'images/generous_caterpillar.png')">Generous Caterpillar - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Squid 7A', 'Screw on feet', 'One good hold makes this climb very tricky and technical.', 'images/generous_squid.png')">Generous Squid - 7A</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Dove 6B+', 'Screw on feet', 'The symetry here truly takes your breath away - 3 move perfection.', 'images/generous_dove.png')">Generous Dove - 6B+</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Salmon 6B', 'Screw on feet', 'Wonderfully positive holds up to the big dyno to the jug.', 'images/generous_salmon.png')">Generous Salmon - 6B</a></li>
+                <li><a href="javascript:void(0);" onclick="openModal('Generous Bat 6B', 'No feet', 'Solid climb with only wood hands to save your skin.', 'images/generous_bat.png')">Generous Bat - 6B</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <h3 id="modal-subheading"></h3>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, subheading, description, imageSrc) {
+            var modal = document.getElementById("myModal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalSubheading = document.getElementById("modal-subheading");
+            var modalImage = document.getElementById("modal-image");
+            var modalDescription = document.getElementById("modal-description");
+
+            modalTitle.textContent = title;
+            modalSubheading.textContent = subheading;
+            modalImage.src = imageSrc;
+            modalDescription.textContent = description;
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
